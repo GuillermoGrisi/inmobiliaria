@@ -1,0 +1,70 @@
+.header{
+    background-color: coral;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+ }
+ #logo{
+   width: 100px;
+   height: 100px;
+   padding: 10px;
+   border-radius: 50%;
+   grid-column: 1;
+ }
+ .headerCompanyName{
+   width: 20vw;
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   grid-column: 1;
+ 
+ }
+ #menuHamb{
+   width: 50px;
+   display: none;
+ }
+ .headerName{
+   grid-column: 2;
+   padding: 10px;
+   font-size: large;
+   font-weight: bold;
+   color: aliceblue;;
+   margin: 0;
+ }
+ .headerName h6{
+   margin: 0;
+ }
+ .headerName h2{
+   margin-bottom: 0;
+ } 
+ .navbar{
+   grid-column: 3;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   font-size: large;
+   font-weight: bold;
+   color: aliceblue;
+ }
+ 
+ .navBarContact {
+   display: flex;
+   align-items: center; 
+ }
+ 
+ #logoWhatsapp {
+   width: 60px;
+   height: 50px;
+ }
+ .headerButton{
+   border: none;
+   background-color: coral;
+   font-size: large;
+   font-weight: bold;
+   color: aliceblue;
+   padding: 10px;
+ }
+ 
+ .headerButton:hover {
+   background-color: aliceblue;
+   color: coral;
+ }
