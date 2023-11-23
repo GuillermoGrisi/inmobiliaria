@@ -1,0 +1,11 @@
+.footerContainer{
+    background-color: coral;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+.footerText{
+    color: white;
+    grid-column: 2;
+    grid-row: 1;
+}

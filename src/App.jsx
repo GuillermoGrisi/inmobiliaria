@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './Components/Footer'
 import Header from './Components/Header'
 import PhotoGallery from './Components/PhotoGallery'
 import Search from './Components/Search'
@@ -11,6 +12,7 @@ function App() {
       <Header/>
       <PhotoGallery/>
       <Search/>
+      <Footer/>
     </>
   )
 }
