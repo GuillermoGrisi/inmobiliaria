@@ -12,7 +12,6 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     background-color: aliceblue;
     opacity: 30%;
-    /* border: 1px solid black; */
     border-radius: 50%;
   }
   .nextPhoto{
@@ -40,16 +39,19 @@
     flex-direction: row;
     justify-content: space-between;
 }
-.bigIcon{
+.houseIcon{
   width: 30px;
   height: 30px;
 }
 .bedIcon{
-    width: 30px;
+  width: 30px;
+  height: 30px;
 }
 .bathIcon{
-    width: 30px;
+  width: 30px;
+  height: 30px;
 }
+
  .infoPhoto{
     position:absolute;
     width: 100vw;
