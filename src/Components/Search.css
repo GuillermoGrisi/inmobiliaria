@@ -1,8 +1,11 @@
-.searchContainer{
+.searchContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
-.searchForm{
+
+.searchForm {
     width: 70%;
     display: flex;
     justify-content: space-between;
@@ -10,50 +13,102 @@
     margin: 20px;
     gap: 10px
 }
-#transactionInput{
+
+#transactionInput {
     /* width: 15%; */
     height: 25px;
 }
-#priceInput{
+
+#priceInput {
     height: 15px;
     height: 25px;
 }
-#PrMinInput{
+
+#PrMinInput {
     width: 30%;
     height: 25px;
 }
-#PrMaxInput{
+
+#PrMaxInput {
     width: 30%;
     height: 25px;
 }
-#tipoPropInput{
+
+#tipoPropInput {
     width: 30%;
     height: 25px;
 }
-#zonaInput{
+
+#zonaInput {
     width: 30%;
     height: 25px;
 }
-#habInput{
+
+#habInput {
     width: 15%;
     height: 25px;
 }
-#bañoInput{
+
+#bañoInput {
     width: 15%;
     height: 25px;
 }
-.heart{
+
+.heart {
     color: gray;
 }
 
-.dropdown{
+.dropdown {
     position: absolute;
     border: 1px solid black;
     background-color: white;
     width: 12%;
 }
-.lista{
+
+.lista {
     margin-top: 5px;
     list-style: none;
     padding-left: 20px;
+}
+
+.estates-list-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0.5em;
+    width: 55%;
+    margin: auto;
+    border-radius: 0.6em;
+}
+
+
+.bg {
+
+    background-color: red;
+    height: 100px;
+    width: 100%;
+    z-index: 3;
+    border-radius: 0 0 0.6em 0.6em;
+}
+
+.estate img {
+
+    width: 100%;
+}
+
+.container {
+
+    height: 250px;
+}
+
+.estate {
+
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.25em;
+    border-radius: 0.6em;
+    z-index: 0;
 }

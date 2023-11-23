@@ -24,13 +24,16 @@ function Search() {
 export default Search */
 import './Search.css';
 import React, { useState } from 'react';
-import {  CiHeart } from "react-icons/ci";
+import { CiHeart } from "react-icons/ci";
+import data from './Data'
 
 function Search() {
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
   const [showPriceDropdown, setShowPriceDropdown] = useState(false);
   const [selectedPriceOption, setSelectedPriceOption] = useState("");
+  const [estatesList, setEstatesList] = useState(data);
+  const [searchValue, setSearchValue] = useState("");
 
   const toggleDropdown = () => {
     setShowDropdown(!showDropdown);
@@ -48,6 +51,11 @@ function Search() {
     setSelectedPriceOption(priceOptions);
     setShowPriceDropdown(false);
   };
+
+  const filteredEstateList = estatesList.filter((estate) =>
+    estate.tipo_de_propiedad.toLowerCase().includes(searchValue.toLowerCase())
+  );
+
   const options = ["Ventas", "Alquiler"];
   const priceOptions = ["U$S", "$U"];
 
@@ -74,8 +82,9 @@ function Search() {
               </ul>
             </div>
           )}</div>
-          <div>
-           <input
+
+        <div>
+          <input
             type="text"
             name="priceInput"
             id="priceInput"
@@ -83,7 +92,7 @@ function Search() {
             onClick={togglePriceDropdown}
             value={selectedPriceOption}
           />
-            {showPriceDropdown && (
+          {showPriceDropdown && (
             <div className="dropdown">
               <ul className='lista'>
                 {priceOptions.map((priceOption, index) => (
@@ -94,45 +103,59 @@ function Search() {
               </ul>
             </div>
           )}
-          </div>
-          <input
-            type="text"
-            name="PrMinInput"
-            id="PrMinInput"
-            placeholder="Precio mínimo"/>
-            <input
-            type="text"
-            name="PrMaxInput"
-            id="PrMaxInput"
-            placeholder="Precio máximo"/>
-             <select
-            type="text"
-            name="tipoPropInput"
-            id="tipoPropInput"
-            placeholder="Tipo de propiedad"/>
-             <input
-            type="text"
-            name="zonaInput"
-            id="zonaInput"
-            placeholder="Zonas"/>
-             <input
-            type="text"
-            name="habInput"
-            id="habInput"
-            placeholder="Habitaciones"/>
-             <input
-            type="text"
-            name="bañoInput"
-            id="bañoInput"
-            placeholder="Baños"/>
-            <input
-            type="text"
-            name="refInput"
-            id="refInput"
-            placeholder="Referencia"/>
-            <button>Buscar</button>
-            <button><CiHeart className='heart'/></button>
+        </div>
+        <input
+          type="text"
+          name="PrMinInput"
+          id="PrMinInput"
+          placeholder="Precio mínimo" />
+        <input
+          type="text"
+          name="PrMaxInput"
+          id="PrMaxInput"
+          placeholder="Precio máximo" />
+        <select
+          type="text"
+          name="tipoPropInput"
+          id="tipoPropInput"
+          placeholder="Tipo de propiedad" />
+        <input
+          type="text"
+          name="zonaInput"
+          id="zonaInput"
+          placeholder="Zonas" />
+        <input
+          type="text"
+          name="habInput"
+          id="habInput"
+          placeholder="Habitaciones" />
+        <input
+          type="text"
+          name="bañoInput"
+          id="bañoInput"
+          placeholder="Baños" />
+        <input
+          type="text"
+          name="refInput"
+          id="refInput"
+          placeholder="Referencia" />
+        <button>Buscar</button>
+        <button><CiHeart className='heart' /></button>
       </form>
+      <div className='estates-list-container'>
+        {filteredEstateList.map((estate) => (
+          <div className='container' key={estate.id}>
+
+            <div className="estate">
+
+              <img src={estate.foto} />
+
+              <div className="bg"></div>
+            </div>
+
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
