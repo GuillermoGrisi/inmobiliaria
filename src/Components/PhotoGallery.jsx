@@ -27,9 +27,10 @@ function PhotoGallery() {
         </div>
        <div className='infoPhoto'>
         <section className='infoSection'>
-        <h3><FaHouseDamage className="houseIcon"/> {data[currentPhotoIndex].mts2}</h3>
-        <h3><FaBed className="bedIcon"/> Dorm: {data[currentPhotoIndex].dormitorios}</h3>
-        <h3><FaBath className="bathIcon"/> Baños: {data[currentPhotoIndex].baños}</h3>
+        <h2 className="descripcion"> {data[currentPhotoIndex].descripcion}</h2>
+        <h3 className="infoMt2"><FaHouseDamage className="houseIcon"/> {data[currentPhotoIndex].mts2}</h3>
+        <h3 className="infoDorm"><FaBed className="bedIcon"/> Dorm: {data[currentPhotoIndex].dormitorios}</h3>
+        <h3 className="infoBaño"><FaBath className="bathIcon"/> Baños: {data[currentPhotoIndex].baños}</h3>
         </section>
         <section className='priceSection'>
         <h3>{data[currentPhotoIndex].precio}</h3>

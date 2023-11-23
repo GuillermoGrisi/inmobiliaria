@@ -8,4 +8,11 @@
     color: white;
     grid-column: 2;
     grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+.footerText p, h4{
+    margin: 0;
 }
