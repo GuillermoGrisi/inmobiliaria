@@ -2,6 +2,11 @@ import './Search.css';
 import React, { useState } from 'react';
 import { CiHeart } from "react-icons/ci";
 import data from './Data'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
+import { faBed } from '@fortawesome/free-solid-svg-icons'
+import { faBath } from '@fortawesome/free-solid-svg-icons'
+
 
 function Search() {
   const [estatesList, setEstatesList] = useState(data);
@@ -143,8 +148,23 @@ function Search() {
             <div className="estate">
 
               <img src={estate.foto} />
-
-              <div className="bg"></div>
+              <div className="bg">
+                <div className="estate-info">
+                  <p>{estate.descripcion}</p>
+                  <div className='icons-container'>
+                    <FontAwesomeIcon icon={faHome} />
+                    <p>{estate.mts2}</p>
+                    <FontAwesomeIcon icon={faBed} />
+                    <p>{estate.dormitorios}</p>
+                    <FontAwesomeIcon icon={faBath} />
+                    <p>{estate.baños}</p>
+                  </div>
+                  <div className='price-container'>
+                    <h4>{estate.tipo_de_propiedad} |</h4>
+                    <h4>{estate.precio}</h4>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>

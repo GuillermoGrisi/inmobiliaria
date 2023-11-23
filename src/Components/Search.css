@@ -152,6 +152,23 @@
     width: 100%;
 }
 
+.estate-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.icons-container {
+    display: flex;
+    gap: 20px;
+}
+
+.price-container {
+    display: flex;
+    justify-content: right;
+}
+
 /* .dropdown{
     position: absolute;
     border: 1px solid black;
